@@ -1,0 +1,1 @@
+/home/fslaktern/.local/share/broot/launcher/fish/br.fish
