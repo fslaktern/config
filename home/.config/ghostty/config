@@ -1,6 +1,6 @@
 font-family = Iosevka Nerd Font Mono
 window-padding-x = 16
 window-padding-y = 2
-theme = GitHub Dark Default
+theme = dark:GitHub Dark Default,light:CLRS
 gtk-titlebar = false
 shell-integration = fish
