@@ -8,6 +8,7 @@
 (setq doom-modeline-mode nil)
 (setq initial-frame-alist nil)
 (setq default-frame-alist nil)
+(setq shell-file-name (executable-find "bash"))
 
 (add-to-list 'default-frame-alist '(undecorated . t))
 (set-frame-parameter nil 'undecorated t)
