@@ -17,6 +17,7 @@ end
 
 zoxide init fish | source
 
+fish_add_path ~/.config/emacs/bin
 source (starship init fish --print-full-init | psub)
 
 bind alt-backspace 'backward-kill-word'
