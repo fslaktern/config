@@ -1,0 +1,47 @@
+* {
+    font-family: "Iosevka Nerd Font";
+    font-size: 14px;
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+#workspaces,
+#clock,
+#cpu,
+#temperature,
+#memory,
+#disk,
+#pulseaudio,
+#network,
+#battery,
+#tray {
+    padding: 0 10px;
+}
+
+#workspaces button {
+    border: none;
+    background: transparent;
+    color: #6c7086;
+    padding: 0 5px;
+}
+
+#workspaces button.active {
+    color: #cdd6f4;
+}
+
+#temperature.critical {
+    color: #f38ba8;
+}
+
+#battery.warning {
+    color: #f9e2af;
+}
+
+tooltip {
+    background: #1e1e2e;
+    border-radius: 8px;
+    padding: 8px;
+}

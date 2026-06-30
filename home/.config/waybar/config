@@ -1,0 +1,77 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 32,
+
+  "modules-left": [
+    "niri/workspaces"
+  ],
+
+  "modules-center": [
+    "clock"
+  ],
+
+  "modules-right": [
+    "cpu",
+    "temperature",
+    "memory",
+    "disk",
+    "pulseaudio",
+    "network",
+    "battery",
+    "tray"
+  ],
+
+  "niri/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "default": "[ ]",
+      "active": "[o]",
+      "urgent": "[!]"
+    }
+  },
+
+  "clock": {
+    "format": "{:%H:%M:%S}",
+    "tooltip-format": "{:%A %d %B %Y}",
+    "interval": 1
+  },
+
+  "cpu": {
+    "format": "CPU: {usage}%",
+    "interval": 3
+  },
+
+  "temperature": {
+    "format": "TEMP: {temperatureC}°C",
+    "interval": 5,
+    "critical-threshold": 85
+  },
+
+  "memory": {
+    "format": "MEM: {percentage}%",
+    "interval": 3
+  },
+
+  "disk": {
+    "format": "DISK: {percentage_used}%",
+    "path": "/",
+    "interval": 30
+  },
+
+  "pulseaudio": {
+    "format": "VOL: {volume}%",
+    "format-muted": "VOL: MUTED",
+    "scroll-step": 5
+  },
+
+  "network": {
+    "format-wifi": "WIFI",
+    "format-ethernet": "ETHERNET",
+    "format-disconnected": "NO NETWORK"
+  },
+
+  "tray": {
+    "spacing": 8
+  }
+}
