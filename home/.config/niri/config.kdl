@@ -7,7 +7,7 @@ input {
             options "grp:win_space_toggle,mod_led:compose,compose:ralt,ctrl:nocaps"
         }
 
-        repeat-delay 200
+        repeat-delay 250
         repeat-rate 35
 
         // Enable numlock on startup, omitting this setting disables it.
@@ -272,40 +272,25 @@ animations {
 // Find more information on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Window-Rules
 
-// Work around WezTerms initial configure bug
-// by setting an empty default-column-width.
 window-rule {
-    // This regular expression is intentionally made as specific as possible,
-    // since this is the default config, and we want no false positives.
-    // You can get away with just app-id="wezterm" if you want.
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
+    match app-id="com.mitchellh.ghostty"
+    match app-id="emacs"
+    default-column-width { proportion 0.30; }
 }
 
-// Open the Firefox picture-in-picture player as floating by default.
+// picture-in-picture player as floating
 window-rule {
-    // This app-id regular expression will work for both:
-    match app-id=r#"zen-browser"# title="^Picture-in-Picture$"
+    match app-id="zen" title="Picture-in-Picture"
     open-floating true
 }
 
 // Example: block out two password managers from screen capture.
-// (This example rule is commented out with a "/-" in front.)
-/-window-rule {
+window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-    match app-id=r#"^org\.gnome\.World\.Secrets$"#
 
     block-out-from "screen-capture"
-
     // Use this instead if you want them visible on third-party screenshot tools.
     // block-out-from "screencast"
-}
-
-// Example: enable rounded corners for all windows.
-// (This example rule is commented out with a "/-" in front.)
-/-window-rule {
-    geometry-corner-radius 12
-    clip-to-geometry true
 }
 
 binds {
