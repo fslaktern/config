@@ -75,7 +75,7 @@ output "HDMI-A-1" {
 environment {
     DISPLAY ":0"
     MOZ_ENABLE_WAYLAND "1"
-    QT_QPA_PLATFORM "wayland"
+    //QT_QPA_PLATFORM "wayland"
     SDL_VIDEODRIVER "wayland"
 }
 
@@ -326,7 +326,7 @@ binds {
     Mod+Return     { spawn "ghostty"; }
     Mod+D          { spawn "fuzzel"; }
     Mod+Shift+D    { spawn-sh "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; }
-    Mod+Escape     { spawn "swaylock"; }
+    Mod+Escape     { spawn "swaylock" "--color" "000000" "--show-failed-attempts" "--show-keyboard-layout" "--indicator-caps-lock" "--font" "Iosevka NF" "--font-size" "24" "--text-color" "ffffff" "--text-ver-color" "ffffff" "--text-wrong-color" "ff4444" "--line-uses-ring" "--ring-color" "24303b" "--ring-ver-color" "24303b" "--ring-wrong-color" "ff4444" "--ring-clear-color" "24303b" "--ring-caps-lock-color" "24303b" "--key-hl-color" "4b6b8a" "--bs-hl-color" "4b6b8a" "--inside-color" "000000" "--inside-ver-color" "000000" "--inside-wrong-color" "000000" "--inside-clear-color" "000000" "--inside-caps-lock-color" "000000" "--line-color" "24303b" "--line-ver-color" "24303b" "--line-wrong-color" "ff4444" "--line-clear-color" "24303b" "--line-caps-lock-color" "24303b" "--separator-color" "4b6b8a"; }
 
     Mod+B          { spawn "zen-browser"; }
     Mod+F          { spawn "cosmic-files"; }
