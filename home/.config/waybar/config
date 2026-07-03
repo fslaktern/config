@@ -12,13 +12,14 @@
   ],
 
   "modules-right": [
+    "niri/language",
     "cpu",
     "temperature",
     "memory",
     "disk",
     "pulseaudio",
-    "network",
     "battery",
+    "network",
     "tray"
   ],
 
@@ -29,6 +30,17 @@
       "active": "[o]",
       "urgent": "[!]"
     }
+  },
+
+  "niri/language": {
+    "format": "KB: {short}"
+  },
+
+  "battery": {
+    "format": "BAT: {capacity}%",
+    "interval": 30,
+    "adapter": "AC",
+    "tooltip": true
   },
 
   "clock": {

@@ -17,8 +17,9 @@ window#waybar {
 #pulseaudio,
 #network,
 #battery,
-#tray {
-    padding: 0 10px;
+#tray,
+#language {
+    padding: 0 14px;
 }
 
 #workspaces button {
