@@ -61,3 +61,4 @@ curl
 wget
 mpv
 git-delta
+kernel-modules-hook
