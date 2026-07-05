@@ -1,0 +1,4 @@
+git clone https://github.com/emacs-mirror/emacs
+git clone https://github.com/doomemacs/core
+curl --proto '=https' --tlsv1.2 https://sh.rustup.rs | sh
+curl --proto '=https' --tlsv1.2 https://bun.com/install | bash
